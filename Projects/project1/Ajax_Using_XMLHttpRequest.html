@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+
+
+    <script>
+        // // 7️⃣ AJAX Call using XMLHttprequest 
+
+        // // how to handled with the events and callback 
+
+        // // XMLHttpRequest (XHR) objects are used to interact with servers. 
+        // // You can retrieve data from a URL without having to do a full 
+        // // page refresh. This enables a Web page to update just part 
+        // // of a page without disrupting what the user is doing. 
+        // // XMLHttpRequest is used heavily in AJAX programming.
+
+        // const request = new XMLHttpRequest();
+        // // we need to call the api or request the api using GET method key, me jo
+        // // url pass kar kr rha hu uska data chaiye 
+        // request.open('GET', "https://covid-api.mmediagroup.fr/v1");
+        // request.send(); // we need to send the request and its async so we need to 
+        // // add the event to load the data adn get it
+
+        // // to get the response 
+        // request.addEventListener("load", () => {
+        //     console.log(this.responseText);
+        // });
+
+        // C8HLFI8mS4NEmrp-UIBdP82j4r58Pk9sJgMSv1VZIK5Q01V3j_pZUnppSZ9KbQiSKaM -- api token
+        
+        const container = document.querySelector('#container');
+        const request = new XMLHttpRequest();
+        request.open('GET', "https://restcountries.eu/rest/v2/name/nepal");
+        request.send();
+
+        // to get response
+        request.addEventListener('load', function() {
+           console.log(this.responseText);
+        })
+
+        // It is not complete because The API is not working
+        // It is not complete because The API is not working
+        // It is not complete because The API is not working
+        // It is not complete because The API is not working
+        // It is not complete because The API is not working
+        // It is not complete because The API is not working
+        // It is not complete because The API is not working
+
+    </script>
+</body>
+
+</html>

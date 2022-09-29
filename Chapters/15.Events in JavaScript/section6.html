@@ -1,0 +1,78 @@
+<!-- / Section 5️⃣ InputEvents in JavaScript 
+// The onchange event occurs when the value of an element has been changed.
+
+// For radiobuttons and checkboxes, the onchange event occurs when the 
+// checked state has been changed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: skyblue;
+        }
+
+        .main-div {
+            height: 98vh;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input,
+        select,
+        label,
+        div#result {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">Your Name </label>
+            <input type="text" id="ice" name="">
+            <br>
+            <br>
+            <label for="">Choose an iceCream
+                <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                    <option value="" selected disabled>Select one</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="sardina">Sardina</option>
+                    <option value="vanilla">Vanilla</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <div id="result">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        // const selectElement = () =>{
+        //     const inputChange = document.querySelector('#ice').value;
+        //     const iceCreams = document.getElementById('iceCreams').value;
+        //     const result = document.querySelector("#result").innerHTML = `${inputChange} and ${iceCreams}`;
+        //     // console.log(`${inputChange} and ${iceCreams}`);
+        // }
+        const iceCreams = document.querySelector("#iceCreams");
+
+        iceCreams.addEventListener("change", () => {
+            const inputChange = document.querySelector('#ice').value;
+            iceCream = iceCreams.value;
+            const result = document.querySelector("#result").innerHTML = `${inputChange} and ${iceCream}`;
+        });
+
+
+    </script>
+</body>
+
+</html>

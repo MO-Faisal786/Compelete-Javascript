@@ -1,0 +1,71 @@
+<!-- Difference between getElementby id and query selectors -->
+<!-- What is getelementbyid?
+Syntax:
+    element = document.querySelector()?
+
+    Return a reference to the element by its id.
+
+If the element with  the specified Id is not in the document,
+It will returns null. -->
+
+<!-- What is querySelector ()?
+Syntax: 
+    element = document.querySelector(selectors);
+
+    reurn the first element with in the document.
+    That match the specified of the selectors,
+    or nulll if no matches are found. -->
+
+<!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <li id="WEB-ID">PHP</li>
+            <li>HTML</li>
+            <li class="web-class">CSS</li>
+            <li class="web-class">Javascript</li>
+        </ul>  
+          
+        <script>
+            console.log(document.getElementById("WEB-ID").innerHTML);
+            console.log(document.querySelector("#WEB-ID").innerHTML);
+        </script>
+    </body>
+    </html> -->
+
+<!-- getElementById vs querySelector: Difference -->
+
+<!-- What if you want to get the html content of the third li?
+    You will not able to use getElementById becouse ther is no id associated with it. But you can so with querySelector. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="WEB-ID">PHP</li>
+        <li>HTML</li>
+        <li class="web-class">CSS</li>
+        <li class="web-class">Javascript</li>
+    </ul>
+    <script>
+        console.log(document.querySelector('ul li.web-class').innerHTML);
+        console.log(document.querySelector('li.web-class').innerHTML);
+        console.log(document.querySelector('.web-class').innerHTML);
+    </script>
+</body>
+
+</html>

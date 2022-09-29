@@ -1,0 +1,147 @@
+<!-- // section 1️⃣ 4 ways of writing Events in JavaScript
+
+// 1: using inline events alert();
+// 2: By Calling a funcion (We already seen and most common way of writing) 
+// 3: using Inline events (HTML onclick="" property and element.onclick)
+// 4: using Event Listeners (addEventListener and IE's attachEvent)
+
+// check the Events HTML File -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(0, 116, 77);
+        }
+
+        .content {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .button_container{
+            margin-top: 30px;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button_su{
+          
+           display: inline-block;
+           border-radius: 30px;
+           margin-bottom: 30px;
+           box-shadow: 0px 10px 8px -8px rgba(0,0,0,0.6);
+        }
+
+        .button_su_inner{
+            display: inline-block;
+            background: yellow;
+            color: #424141;
+            font-size: 16px;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 22px;
+            z-index: 1000000;
+        }
+
+        .button_text_container{
+            position: relative;
+            z-index: 10000;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Difference Events types In JavaScript</h1>
+        <div class="button_container">
+            <div class="button_su">
+
+                <a href="#" class="button_su_inner" onclick="alert('Iam awesome but no one use me.')">
+                    <span class="button_text_container">
+                        simle inline alert()
+                    </span>
+                </a>
+            </div>
+            <div class="button_su">
+
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                    <span class="button_text_container">
+                        By calling a function
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+
+                <a href="#" class="button_su_inner" id="thirdWay">
+                    <span class="button_text_container" >
+                        Inline Events
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+
+                <a href="#" class="button_su_inner" id="fourThway">
+                    <span class="button_text_container" >
+                        Event Listeners
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 2 nd 
+        const callingFunction = () =>{
+            alert("I am also a way to write event...");
+        }
+
+        // 3rd 
+        const thirdWay = document.getElementById("thirdWay");
+        thirdWay.onclick = () =>{
+            alert("I am third way of writing event..")
+        }
+
+        thirdWay.onclick = () =>{
+            console.log("I am third way of writing event..");
+        }
+
+        // 4th 
+        const fourThway = document.getElementById("fourThway")
+        
+        fourThway.addEventListener('click', () => {
+            alert("I am furth way of writing event...")
+        })
+
+        fourThway.addEventListener('click', () => {
+            console.log("I am furth way of writing event...");
+        })
+
+
+    </script>
+</body>
+
+</html>

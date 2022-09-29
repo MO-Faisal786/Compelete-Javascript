@@ -1,0 +1,15 @@
+1. Javscript was created in 1996.
+2. In 1997, it was then submitted to ECMA international for standardization which resulted in ECMA script .
+3. In 2015, Java script is updated with version which is called ES6.
+4. Then again and again updates comes and called by the name of ES7,ES8,ES9....
+
+                    Services in 2015 Which is also called ES6
+
+        1. Let and Const (These keywords are use to define variable.)
+        2. Templetes strings
+        3. Defoult Arguments
+        4. Rest operators
+        5. Destructuring
+        6. Object properties
+        7. Arrow function
+        8. Spread Operators

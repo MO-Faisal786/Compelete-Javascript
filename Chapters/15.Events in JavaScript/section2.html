@@ -1,0 +1,75 @@
+<!-- // section 2️⃣: What is Event Object?
+// Event object is the parent object of the event object. 
+// for Example 
+// MouseEvent, focusEvent, KeyboardEvent etc  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(78, 90, 67);
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 134px;
+        }
+
+        
+
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4rem;
+            background-color: aqua;
+           height: 4rem;
+           width: 16.5rem;
+           border: none;
+           border-radius: 2px;
+        }
+
+        a{
+           text-decoration: none; 
+           color: rgb(139, 63, 63);
+           font-size: large;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Let's see Event Object...</h1>
+    <div class="content">
+        <a href="#" class="btn" id="button">
+            Event listners
+        </a>
+    </div>
+
+
+    <script>
+        const button = document.getElementById("button");
+
+        const checkEvent = (event) => {
+            alert("it is alert to chech...")
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+        button.addEventListener("click", checkEvent);
+
+    </script>
+</body>
+
+</html>

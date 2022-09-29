@@ -1,0 +1,54 @@
+<!-- 1️⃣: Event Propagation (Event Bubbling and Event Capturing) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        body{
+            height: 98vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parentDiv{
+            height: 15rem;
+            width: 15rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: chartreuse;
+            border: 3px solid darkgreen;
+        }
+
+        .childDiv{
+            height: 6rem;
+            width: 6rem;
+            background: whitesmoke;
+            box-shadow: 4px 4px -4px rgba(0, 0, 0, 0.5);
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parentDiv" id="parentId">
+        <div class="childDiv" id="childDiv"></div>
+    </div>
+    <script>
+        const parentDiv = document.getElementById('parentId');
+        const childDiv = document.getElementById('childDiv');
+
+        parentDiv.addEventListener('click', ()=>{
+            alert('This is parentdiv..');
+        }, true)
+
+        childDiv.addEventListener('click', ()=>{
+            alert('This is childdiv');
+            // event.stopPropagation();
+        }, true)
+    </script>
+</body>
+</html>

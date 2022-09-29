@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: skyblue;
+        }
+        .main-class{
+            height: 98vh;
+            width: auto;
+            font-size: larger;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #btn,#btn1{
+            display: inline-block;
+            height: 34px;
+            width: 100px;
+            border: none;
+            border-radius: 4px;
+            background: greenyellow;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #btn:hover,#btn1:hover{
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-class">
+        <div>
+            <p>Can you stop me when I reach at 5?</p>
+            <p class="para"></p>
+            <br>
+            <button id="btn">Start</button>
+            <button id="btn1">Stop</button>
+        </div>
+    </div>
+    <script>
+        const stomNum = document.querySelector('.para');
+        const btn = document.querySelector('#btn');
+        const btn1 = document.querySelector('#btn1');
+        let num = 0;
+        let timeRef;
+
+        btn.addEventListener('click', () =>{
+            stomNum.innerHTML = "Loading...";
+            timeRef = setInterval(() => {
+                stomNum.innerHTML = `${num}`;
+                num++;
+            }, 1000);
+        });
+        btn1.addEventListener('click', ()=>{
+            clearInterval(timeRef);
+        })
+    </script>
+</body>
+</html>

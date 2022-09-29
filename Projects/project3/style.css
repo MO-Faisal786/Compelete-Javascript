@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main-heading{
+    height: 100vh;
+    width: auto;
+    background: rgb(140, 0, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    height: 20rem;
+    width: auto;
+    /* background-color: red; */
+}
+
+.btn-div{
+    height: 100px;
+    width: 40rem;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button{
+    height: 3rem;
+    width: 13rem;
+    background: yellow;
+    font-size: 19px;
+    cursor: pointer;
+}
+

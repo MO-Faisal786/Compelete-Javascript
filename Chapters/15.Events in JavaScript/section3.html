@@ -1,0 +1,67 @@
+<!-- // section 3️⃣ MouseEvent in JavaScript
+// The MouseEvent Object
+// Events that occur when the mouse interacts with the HTML 
+// document belongs to the MouseEvent Object. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(112, 167, 167);
+            text-align: center;
+        }
+
+        #myPara {
+            display: inline-block;
+            height: 80px;
+            width: 605px;
+            margin-top: 100px;
+            padding: 77px 40px;
+            background: cyan;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="myPara" onmousedown = "mouseDown()" onmouseup="moseUp()">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci magni, quibusdam voluptatem dolore optio
+        natus. Nostrum eligendi natus commodi libero asperiores fugit unde pariatur aliquid. Distinctio omnis ullam
+        necessitatibus. Quo, voluptatum facilis. Ratione, doloribus.
+    </p>
+
+    <script>
+        const myPara = document.getElementById("myPara");
+        const mouseDown = () =>{
+            // myPara.style.color =  "red";
+            myPara.style.background =  "red";
+            // alert("i am right..")
+
+        }
+
+        const moseUp = () =>{
+            myPara.style.color = "White";
+            myPara.style.background = "cyan";
+        }
+
+        // myPara.onmousedown = () =>{
+        //     alert("i am faisl malik")
+        // }
+            // The  below code is not working. 
+        // const checkThisEvent = () =>{
+        //     alert("this is only alert..");
+        // }
+        // myPara.addEventListener('onmousedown', checkThisEvent = () =>{
+        //     alert("faisal malik")
+        // })
+    </script>
+</body>
+
+</html>

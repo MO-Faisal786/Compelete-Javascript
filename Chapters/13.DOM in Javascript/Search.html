@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            height: 2rem;
+            width: 6.5rem;
+            border: 2px solid yellowgreen;
+            background-color: yellowgreen;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para">Please like the video...</p>
+    <p class="para">Pls... shere the video...</p>
+    <p>Don't forget to subscribe the video...</p>
+    <h1 id="heading">You are fake</h1>
+
+    <form action="">
+        <label for="male">male</label>
+        <input type="radio" name="gender" id="male">
+        <label for="female">female</label>
+        <input type="radio" name="gender" id="female">
+        <label for="costom">costom</label>
+        <input type="radio" name="gender" id="costom">
+    </form>
+    <br>
+    <button onclick="changeContent()">click here</button>
+
+    <script>
+        const changeContent = () => {
+            // document.getElementById("heading").innerHTML = "Faisal Malik";
+
+            // console.log(document.getElementsByClassName("para"));
+            // console.log(document.getElementsByTagName("p"));
+            // console.log(document.getElementsByName('gender'));
+            //    Now the same we have query selectors 
+            //    Query selectors return the first matching value 
+            //    whereas queryselectorall() return all the elements
+
+            // document.querySelector("#heading").innerHTML = " I am Mohd Faisal Malik..."
+            // document.querySelector(".para").innerHTML = " I am Mohd Faisal Malik..."
+            // console.log( document.querySelectorAll(".para"));
+            console.log( document.querySelectorAll("#heading"));
+
+        }
+    </script>
+</body>
+
+</html>
